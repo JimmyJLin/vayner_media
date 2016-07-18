@@ -9,13 +9,16 @@ fs.createReadStream("./db/source1.csv").pipe(converterOne);
 const converterTwo = new Converter({});
 fs.createReadStream("./db/source2.csv").pipe(converterTwo);
 
+
+
+
 /* First Question: How many unique campaigns ran in February? */
 const questionOne = (array)=>{
 
   // an empty array variable to store all the unique campaigns
   const uniqueCompaigns = [];
 
-  // look through campaign array
+  // look through the entire array
   array.forEach((campaign)=>{
 
     // remove "/" from each of the string in the campaign.date and convert into an array data [month, day, year]
@@ -41,9 +44,47 @@ const questionOne = (array)=>{
 
 
 /* Second Question: What is the total number of conversions on plants? */
+const questionTwo = (array) => {
+
+  // set the initial plantConversions value to 0
+  let plantConversions = 0;
+
+  // look through the entire array
+  array.forEach( (campaign)=>{
+
+    // assign all campaign actions data to variable actions
+    const actions = campaign.actions
+
+    // loop through actions and
+    actions.forEach((conversion)=>{
+
+      // if there is conversion and action type X
+      if (conversion.x && conversion.action === "conversions") {
+
+        // increase the number of plantConversions by the # of conversion of x
+        plantConversions += conversion.x
+
+      // if there is conversion and action type Y
+      } else if (conversion.y && conversion.action === "conversions"){
+
+        // increase the number of plantConversions by the # of conversion of y
+        plantConversions += conversion.y
+      }
+
+    })
+
+  })
+  return plantConversions
+}
+
+
+
 
 
 /* Third Question: what auidence, asset combination had the least expensive conversions? */
+
+
+
 
 
 /* Fourth Question: What was the total cost per video view? */
@@ -52,7 +93,14 @@ const questionOne = (array)=>{
 
 // return parsed data from converterOne
 converterOne.on("end_parsed", function(sourceOne){
+
+  // answer to First Question
   console.log("Q1) Number of unique campaigns ran in February: " + questionOne(sourceOne));
+
+  // answer to Second Question
+
+  console.log("Q2) Total number of plants conversion: " +questionTwo(sourceOne))
+
 })
 
 // return parsed data from converterOne
