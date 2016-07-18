@@ -29,3 +29,15 @@ The goal of this exercise is to simulate the creation of a report, by merging tw
 2. What is the total number of conversions on plants?
 3. What audience, asset combination had the least expensive conversions?
 4. What was the total cost per video view?
+
+#### Answers:
+Run the following code inside the vayner_media directory to get the answer to the 4 questions
+
+```javascript
+cd vayner_media
+
+npm install
+
+npm run start
+
+```
