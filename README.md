@@ -31,9 +31,16 @@ The goal of this exercise is to simulate the creation of a report, by merging tw
 4. What was the total cost per video view?
 
 #### Answers:
-Run the following code inside the vayner_media directory to get the answer to the 4 questions
+
+The answers can be view from [github.](https://github.com/JimmyJLin/vayner_media)
+
+Run the following code inside the vayner_media directory to get the answer to the 4 questions.
+
 
 ```javascript
+
+git clone git@github.com:JimmyJLin/vayner_media.git
+
 cd vayner_media
 
 npm install
