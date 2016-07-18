@@ -1,0 +1,24 @@
+{
+  "name": "vayner_media",
+  "version": "1.0.0",
+  "description": "The goal of this exercise is to simulate the creation of a report, by merging two datasets together, and drawing some basic insights.  Given the stated assumptions, please provide your answer to the following 4 questions, as well as your code.  Use of python, particularly with Pandas, is encouraged.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimmyJLin/vayner_media.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JimmyJLin/vayner_media/issues"
+  },
+  "homepage": "https://github.com/JimmyJLin/vayner_media#readme",
+  "dependencies": {
+    "csvtojson": "^1.0.0",
+    "file-system": "^2.2.1"
+  }
+}
